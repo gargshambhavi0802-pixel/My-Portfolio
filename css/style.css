@@ -1,0 +1,250 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #F8F3E8;
+}
+
+.main_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 170px;
+    
+}
+.main_heading{
+    text-align: center;
+    font-family: "UnifrakturCook", cursive;
+    font-size: 70px;
+    margin: 20px;
+    padding: 0 10px;
+}
+
+.small_text{
+    margin: 60px;
+    font-family: "Libre Baskerville", serif;
+    text-align: right;
+}
+
+.tagline{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    margin: 20px 0;
+
+    font-family: "Libre Baskerville", serif;
+    font-size: 15px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #4F6F52;
+}
+
+.tagline::before,
+.tagline::after{
+    content: "";
+    width:180px;
+    height: 1px;
+    background: #1c1c1c;
+}
+
+.navbar{
+    width: 95%;
+    margin: 35px auto 0;
+    border-top: 3px double #1c1c1c;
+    border-bottom: 3px double #1c1c1c;
+}
+.navbar ul{
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    gap: 120px;
+    list-style-type: none;
+    font-size: large;
+    /* padding: 10px; */
+}
+
+.navbar ul li{
+    padding: 5px;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: black;
+}
+.navbar li:hover{
+    background-color: #4F6F52;
+    /* padding: 5px; */
+    border-radius: 5px;
+}
+
+.section{
+    margin-top: 20px;
+    margin-left: 10px;
+    display: flex;
+    justify-content: left;
+    gap: 100px;
+}
+.left{
+    margin-left: 300px;
+    padding: 5px;
+    width: 30vw;
+}
+.content{
+    width: 310px;
+    text-align: justify;
+    margin-bottom: 25px;
+    font-size: medium;
+    font-family: "Libre Baskerville", serif;
+    line-height: 22px;
+}
+
+.read{
+    font-size: larger;
+    background-color: #4F6F52;
+    border-radius: 10px;
+    height: 50px;
+    width: 150px;
+    font-weight: bold;
+}
+
+.image_container{
+    width: 260px;
+    height: 340px;
+    background-color: #e8e5de;
+    /* opacity: 0.1; */
+    border: 1px solid #1c1c1c;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border-radius: 10px; */
+}
+.name{
+    font-size: large;
+    margin-top: 10px;
+    font-weight: 550 ;
+}
+.my_image{
+    width: 260px;
+    /* border-radius: 10px; */
+    /* opacity: 1; */
+    /* height: 150px; */
+}
+
+.line{
+    border: none;
+    border-top: 3px double #2B2B2B;
+    margin: 40px auto 0;
+    width: 95%;
+}
+
+.section2{
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    /* margin-bottom: 15px; */
+}
+
+.fonts{
+    font-family: "Libre Baskerville", serif;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #2B2B2B;
+    padding-bottom: 7px;
+}
+
+
+
+.highlights > h3{
+    text-align: center;
+    /* width: 25vw; */
+    
+}
+
+.skill{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: left;
+    width: 19vw;
+    margin-top: 28px;
+    /* margin-bottom: 5px; */
+}
+
+svg{
+    width: 40px;
+    height: 40px;
+}
+
+.skill h3{
+    /* margin-top: 10px; */
+    margin-bottom: 1px;
+    color: #1c1c1c;
+    
+}
+
+.skill p{
+    color: #444;
+    font-size: 16px;
+}
+
+
+
+
+.news{
+    /* text-align: center; */
+    width: 300px;
+}
+
+.news > h3{
+    text-align: left;
+}
+
+.para{
+    font-size: 18px;
+    margin-top: 15px;
+    width: 250px;
+    /* text-align: justify; */
+}
+
+.edition{
+    width: 300px;
+}
+
+.edition > h3{
+    text-align: center;
+}
+
+.skills{
+    display: flex;
+    gap: 15px;
+    align-items: top;
+    justify-content: left;
+    width: 19vw;
+    margin-top: 28px;
+    margin-left: 30px;
+    /* margin-bottom: 5px; */
+}
+
+.vertical{
+    border-right: 1px solid #2B2B2B;
+}
+
+.footer svg{
+    height: 10px;
+    width: 10px;
+}
+.footer{
+    /* position: fixed; */
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 15px;
+    font-weight: bold
+}
