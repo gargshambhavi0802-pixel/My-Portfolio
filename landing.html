@@ -4,137 +4,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>The Algorithm Times</title>
 
-    <!-- Google Fonts -->
+    <link rel="stylesheet" href="css/landing.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
 
-    <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap"
-        rel="stylesheet">
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/landing.css">
+    <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
 
 </head>
 
-
 <body>
 
-    <main class="landing_page">
+    <div class="landing">
 
-        <!-- TOP INFORMATION -->
+        <!-- Date -->
+        <p class="edition">
+            SPECIAL EDITION • 2026
+        </p>
 
-        <div class="top_info">
+        <!-- Main Title -->
+        <h1 id="title"></h1>
 
-            <span>THE DIGITAL EDITION</span>
+        <!-- Subtitle -->
+        <p class="subtitle">
+            Printing Today's Edition...
+        </p>
 
-            <span>VOL. 01</span>
+        <!-- Loading Bar -->
+        <div class="loading-box">
 
-            <span>SG EDITION</span>
+            <div class="loading-bar">
 
-        </div>
-
-
-        <!-- MAIN NEWSPAPER TITLE -->
-
-        <h1 class="main_heading">
-            The Algorithm Times
-        </h1>
-
-
-        <!-- DATE + EDITION -->
-
-        <div class="edition_info">
-
-            <span>EST. 2008</span>
-
-            <span>•</span>
-
-            <span>A STORY OF GROWTH, CODE & CURIOSITY</span>
-
-            <span>•</span>
-
-            <span>2026 EDITION</span>
-
-        </div>
-
-
-        <!-- HORIZONTAL LINE -->
-
-        <div class="line"></div>
-
-
-        <!-- MAIN WELCOME SECTION -->
-
-        <section class="welcome_section">
-
-            
-
-            <h2 class="typing_text">
-
-                <span id="typing"></span><span class="cursor">|</span>
-
-            </h2>
-
-
-            <p class="description">
-
-                Where ideas turn into code,
-                curiosity turns into learning,
-                and every project becomes part of the story.
-
-            </p>
-
-
-            <a href="index.html" class="enter_button">
-
-                <span>READ THE STORY</span>
-
-                <span class="arrow">→</span>
-
-            </a>
-
-        </section>
-
-
-        <!-- BOTTOM NEWSPAPER INFO -->
-
-        <div class="bottom_section">
-
-            <div class="bottom_line"></div>
-
-            <div class="bottom_content">
-
-                <span>WEB DEVELOPMENT</span>
-
-                <span>AI & GENAI</span>
-
-                <span>DATA</span>
-
-                <span>DSA</span>
-
-                <span>CREATIVITY</span>
+                <div id="progress"></div>
 
             </div>
 
-            <div class="bottom_line"></div>
+            <span id="percent">0%</span>
 
         </div>
 
+        <!-- Status Message -->
+        <p id="status">
+            Preparing Front Page...
+        </p>
 
-    </main>
+        <!-- Button (Initially Hidden) -->
+        <button id="enterBtn">
+            OPEN TODAY'S EDITION →
+        </button>
 
+    </div>
 
-    <!-- TYPING ANIMATION -->
-
-    
-     <script src="javascript/landing.js"></script>
-
+    <script src="javascript/landing.js"></script>
 
 </body>
 
