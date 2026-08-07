@@ -251,7 +251,7 @@ svg{
 
 /* ---------------- INITIAL STATE ---------------- */
 
-.main_container,
+/* .main_container,
 .tagline,
 .navbar,
 .left,
@@ -261,4 +261,4 @@ svg{
 .footer{
     opacity:0;
     transform:translateY(30px);
-}
+} */
