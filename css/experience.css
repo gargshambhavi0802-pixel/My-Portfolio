@@ -130,18 +130,25 @@ body {
 /* ================= EXPERIENCE CONTAINER ================= */
 
 .experience_container {
-    width: 80%;
-    max-width: 1100px;
+    width: 85%;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
-/* ================= EXPERIENCE ITEM ================= */
+/* ================= EXPERIENCE ITEM (4 COLUMNS) ================= */
 
 .experience_item {
     display: grid;
-    grid-template-columns: 140px 30px 1fr;
+    grid-template-columns: 120px 30px 1fr 180px;
     gap: 20px;
-    min-height: 160px;
+    align-items: start;
+    padding-bottom: 35px;
+    margin-bottom: 35px;
+    border-bottom: 1px solid #c8c2b5;
+}
+
+.experience_item:last-of-type {
+    border-bottom: none;
 }
 
 /* ================= DATE ================= */
@@ -167,6 +174,7 @@ body {
 
 .timeline {
     position: relative;
+    height: 100%;
     border-left: 1px solid #1c1c1c;
 }
 
@@ -183,15 +191,6 @@ body {
 }
 
 /* ================= EXPERIENCE CONTENT ================= */
-
-.experience_content {
-    padding-bottom: 35px;
-    border-bottom: 1px solid #c8c2b5;
-}
-
-.experience_item:last-of-type .experience_content {
-    border-bottom: none;
-}
 
 .experience_content h2 {
     font-family: "Libre Baskerville", serif;
@@ -212,11 +211,42 @@ body {
     font-size: 14px;
     line-height: 22px;
     color: #444;
-    max-width: 700px;
 }
 
 .experience_content strong {
     color: #1c1c1c;
+}
+
+/* ================= SIDE GREEN CERTIFICATE BUTTON ================= */
+
+.cert_side_wrapper {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding-top: 4px;
+}
+
+.cert_btn {
+    display: inline-block;
+    padding: 8px 14px;
+    font-family: "Libre Baskerville", serif;
+    font-size: 11px;
+    font-weight: bold;
+    color: #F8F3E8;
+    background-color: #4F6F52;
+    border: 1px solid #4F6F52;
+    text-decoration: none;
+    text-align: center;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    transition: all 0.25s ease;
+    border-radius: 3px;
+}
+
+.cert_btn:hover {
+    background-color: #3b533d;
+    border-color: #3b533d;
+    box-shadow: 0 4px 10px rgba(79, 111, 82, 0.3);
 }
 
 /* ================= TAGS ================= */
@@ -268,7 +298,7 @@ body {
 
 .achievement {
     display: flex;
-    gap: 15px;
+    flex-direction: column;
     padding: 20px;
     border: 1px solid #1c1c1c;
     background-color: #f7f2e8;
@@ -278,6 +308,13 @@ body {
 .achievement:hover {
     transform: translateY(-4px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+.achievement_header {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 10px;
 }
 
 .number {
@@ -290,7 +327,6 @@ body {
 .achievement h3 {
     font-family: "Libre Baskerville", serif;
     font-size: 16px;
-    margin-bottom: 8px;
     color: #1c1c1c;
 }
 
@@ -299,6 +335,14 @@ body {
     font-size: 13px;
     line-height: 20px;
     color: #444;
+}
+
+.cert_wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: auto;
+    padding-top: 18px;
 }
 
 /* ================= SHARED FOOTER ================= */
@@ -335,6 +379,12 @@ body {
 
     .experience_item {
         grid-template-columns: 100px 30px 1fr;
+    }
+
+    .cert_side_wrapper {
+        grid-column: 3;
+        justify-content: flex-start;
+        margin-top: 10px;
     }
 
     .achievement_grid {
