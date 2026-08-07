@@ -155,7 +155,7 @@ body {
 /* ================= PROJECT IMAGE ================= */
 
 .project_image {
-    width: 170px;
+    width: 100px;
     height: 100px;
     flex-shrink: 0;
 }
