@@ -248,3 +248,17 @@ svg{
     margin: 15px;
     font-weight: bold
 }
+
+/* ---------------- INITIAL STATE ---------------- */
+
+.main_container,
+.tagline,
+.navbar,
+.left,
+.right,
+.line,
+.section2,
+.footer{
+    opacity:0;
+    transform:translateY(30px);
+}
