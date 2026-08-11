@@ -1,14 +1,15 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    background-color: #F8F3E8;
+    background: #F8F3E8;
     color: #1c1c1c;
 }
 
-/* ================= HEADER ================= */
+/* ================= SHARED HEADER ================= */
 
 .main_container {
     display: flex;
@@ -52,7 +53,7 @@ body {
     background: #1c1c1c;
 }
 
-/* ================= NAVBAR ================= */
+/* ================= SHARED NAVBAR ================= */
 
 .navbar {
     width: 95%;
@@ -91,16 +92,16 @@ body {
 /* ================= PAGE HEADING ================= */
 
 .heading {
-    font-size: 60px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 70px;
     margin-top: 35px;
+    text-align: center;
+}
+
+.heading h1 {
+    font-size: 60px;
     color: #4F6F52;
     font-family: "Libre Baskerville", serif;
     font-weight: bold;
+    letter-spacing: 2px;
 }
 
 /* ================= SEPARATOR ================= */
@@ -108,8 +109,8 @@ body {
 .separator {
     display: flex;
     align-items: center;
-    width: 55%;
-    margin: 30px auto;
+    width: 45%;
+    margin: 30px auto 50px;
 }
 
 .separator::before,
@@ -117,112 +118,162 @@ body {
     content: "";
     flex: 1;
     height: 1px;
-    background-color: #1c1c1c;
+    background: #1c1c1c;
 }
 
 .separator span {
-    padding: 0 20px;
+    padding: 0 25px;
+    letter-spacing: 8px;
     color: #4F6F52;
-    font-size: 16px;
-    letter-spacing: 5px;
     font-family: "Libre Baskerville", serif;
 }
 
-/* ================= SKILLS CONTAINER ================= */
+/* ================= CLASSIFIEDS SECTION ================= */
 
-.skills_container {
+.classifieds_wrapper {
     width: 85%;
-    margin: 20px auto 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    margin: 0 auto 50px;
 }
 
-/* ================= INDIVIDUAL SKILL BOX ================= */
-
-.skill_box {
-    box-sizing: border-box;
-    width: 33.333%;
-    min-height: 250px;
-    padding: 30px 35px;
-    border-right: 1px solid #b8b2a7;
-    border-bottom: 1px solid #b8b2a7;
-}
-
-.skill_box:nth-child(3n) {
-    border-right: none;
-}
-
-.skill_box:nth-child(7),
-.skill_box:nth-child(8) {
-    border-bottom: none;
-}
-
-/* ================= SKILL TITLE ================= */
-
-.skill_title {
-    display: flex;
-    align-items: center;
-    gap: 15px;
+.classifieds_subhead {
+    text-align: center;
+    border-top: 2px solid #1c1c1c;
+    border-bottom: 2px solid #1c1c1c;
+    padding: 8px 0;
     margin-bottom: 30px;
 }
 
-.skill_title h3 {
-    font-size: 17px;
-    line-height: 1.4;
+.classifieds_subhead span {
     font-weight: bold;
-    font-family: "Libre Baskerville", serif;
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: #4F6F52;
+    font-family: "Courier Prime", monospace;
 }
 
-/* ================= LUCIDE ICON ================= */
+.classifieds_subhead p {
+    font-size: 11px;
+    letter-spacing: 1px;
+    margin-top: 3px;
+    color: #555;
+    font-family: "Courier Prime", monospace;
+}
 
-.icon {
-    width: 40px;
-    height: 40px;
+.classifieds_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 25px;
+}
+
+/* ================= CLASSIFIED CARD ================= */
+
+.classified_card {
+    background-color: #FAF6EE; /* Exact same background color for all cards */
+    border: 2px solid #1c1c1c;
+    outline: 1px solid #1c1c1c;
+    outline-offset: -5px;
+    padding: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.25s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+/* Lift effect on hover */
+.classified_card:hover {
+    transform: translateY(-8px);
+    box-shadow: 6px 8px 0px #1c1c1c;
+}
+
+.ad_badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    font-family: "Courier Prime", monospace;
+    font-size: 9px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    background: #1c1c1c;
+    color: #F8F3E8;
+    padding: 2px 6px;
+    text-transform: uppercase;
+}
+
+.ad_title {
     display: flex;
     align-items: center;
-    justify-content: center;
-    color: #2B2B2B;
-}
-
-.icon svg {
-    width: 32px;
-    height: 32px;
-}
-
-/* ================= SKILL LIST ================= */
-
-.skill_box ul {
-    list-style: none;
-    margin-left: 10px;
-}
-
-.skill_box li {
-    font-size: 15px;
+    gap: 10px;
+    margin-top: 10px;
     margin-bottom: 12px;
-    position: relative;
-    padding-left: 15px;
+    border-bottom: 1px solid #1c1c1c;
+    padding-bottom: 10px;
+}
+
+.icon_symbol {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #1c1c1c;
+}
+
+.icon_symbol svg {
+    stroke: #1c1c1c;
+}
+
+.ad_title h3 {
+    font-size: 13px;
+    font-weight: bold;
+    color: #1c1c1c;
+    line-height: 1.2;
+    letter-spacing: 0.5px;
     font-family: "Libre Baskerville", serif;
 }
 
-.skill_box li::before {
-    content: "•";
-    position: absolute;
-    left: 0;
-    color: #4F6F52;
-    font-weight: bold;
+.ad_desc {
+    font-size: 12px;
+    font-style: italic;
+    color: #444;
+    margin-bottom: 15px;
+    line-height: 1.4;
+    font-family: "Libre Baskerville", serif;
 }
 
-/* ================= FOOTER LINE ================= */
+.ad_tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    list-style: none;
+    margin-bottom: 15px;
+}
+
+.ad_tags li {
+    font-family: "Courier Prime", monospace;
+    font-size: 11px;
+    font-weight: bold;
+    background-color: rgba(79, 111, 82, 0.1);
+    color: #2B2B2B;
+    border: 1px solid #1c1c1c;
+    padding: 3px 6px;
+}
+
+.ad_footer {
+    font-family: "Courier Prime", monospace;
+    font-size: 10px;
+    color: #777;
+    text-align: right;
+    border-top: 1px dashed #BBB;
+    padding-top: 8px;
+}
+
+/* ================= SHARED FOOTER ================= */
 
 .line {
     border: none;
     border-top: 3px double #2B2B2B;
-    margin: 30px auto 0;
+    margin: 50px auto 0;
     width: 95%;
 }
-
-/* ================= FOOTER ================= */
 
 .footer {
     display: flex;
