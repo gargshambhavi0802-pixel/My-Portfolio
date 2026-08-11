@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACHIEVEMENTS - The Algorithm Times</title>
+
+    <link rel="stylesheet" href="../css/experience.css">
+    <link rel="stylesheet" href="../css/achievements.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/png" href="../images/SG.png">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+    <div class="main_container">
+        <div class="small_text" style="text-align: left;">
+            <p>25th March,</p>
+            <p>2008</p>
+        </div>
+
+        <div>
+            <h1 class="main_heading">The Algorithm Times</h1>
+        </div>
+
+        <div class="small_text">
+            <p>SG Edition</p>
+            <p>Special Edition</p>
+        </div>
+    </div>
+
+    <!-- ================= TAGLINE ================= -->
+    <div class="tagline">
+        <span>BUILDING SOLUTIONS • CREATING IMPACT</span>
+    </div>
+
+    <!-- ================= NAVBAR ================= -->
+    <div class="navbar">
+        <ul>
+            <li><a href="../index.html">HOME</a></li>
+            <li><a href="skills2.html">SKILLS</a></li>
+            <li><a href="projects.html">PROJECTS</a></li>
+            <li><a href="experience.html">EXPERIENCE</a></li>
+            <li><a href="achievements.html">ACHIEVEMENTS</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+    </div>
+
+    <!-- ================= PAGE HEADING ================= -->
+    <div class="heading">
+        <h1>ACHIEVEMENTS & MILESTONES</h1>
+    </div>
+
+    <!-- ================= SEPARATOR ================= -->
+    <div class="separator">
+        <span>• • •</span>
+    </div>
+
+    <!-- ================= ACHIEVEMENTS SECTION ================= -->
+    <section class="achievements_container">
+        <div class="achievement_grid">
+
+            <!-- ACHIEVEMENT 1 -->
+            <div class="achievement">
+                <div class="achievement_header">
+                    <span class="number">01</span>
+                    <h3>French DELF A1</h3>
+                </div>
+                <p>Awarded the official Diplôme d'Études en Langue Française (DELF A1) in 2023 by France Éducation International, certifying basic proficiency in French communication and comprehension.</p>
+                <div class="cert_wrapper">
+                    <button class="cert_btn" 
+                            data-title="EXTRA! EXTRA! French DELF A1 Certification Achieved!"
+                            data-desc="Awarded the official Diplôme d'Études en Langue Française (DELF A1) in 2023 by France Éducation International, certifying basic proficiency in French communication and comprehension."
+                            data-img="../images/delf-a1-cert.png">
+                        VIEW CERTIFICATE ↗
+                    </button>
+                </div>
+            </div>
+
+            <!-- ACHIEVEMENT 2 -->
+            <div class="achievement">
+                <div class="achievement_header">
+                    <span class="number">02</span>
+                    <h3>Data Visualization Virtual Experience</h3>
+                </div>
+                <p>Completed a hands-on virtual experience program hosted by Forage, mastering executive-level data visualization and storytelling techniques to drive strategic business decisions.</p>
+                <div class="cert_wrapper">
+                    <button class="cert_btn" 
+                            data-title="BREAKING NEWS: Data Visualization Mastery Certificate Earned via Forage!"
+                            data-desc="Completed a hands-on virtual experience program hosted by Forage, mastering executive-level data visualization and storytelling techniques to drive strategic business decisions."
+                            data-img="../images/forage-cert.png">
+                        VIEW CERTIFICATE ↗
+                    </button>
+                </div>
+            </div>
+
+            <!-- ACHIEVEMENT 3 -->
+            <div class="achievement">
+                <div class="achievement_header">
+                    <span class="number">03</span>
+                    <h3>1st Place — AWS Summer Builder Cohort</h3>
+                </div>
+                <p>Worked as a team to build Sentinel Chain AI, an AI-powered supply chain intelligence platform, and secured first place in the cohort.</p>
+                <div class="cert_wrapper">
+                    <button class="cert_btn" 
+                            data-title="SPECIAL BULLETIN: Team Takes 1st Place at AWS Summer Builder Cohort!"
+                            data-desc="Worked as a team to build Sentinel Chain AI, an AI-powered supply chain intelligence platform, and secured first place in the cohort."
+                            data-img="../images/aws-cert.png">
+                        VIEW CERTIFICATE ↗
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================= MODAL WINDOW ================= -->
+    <div id="certModal" class="modal_overlay">
+        <div class="modal_content">
+            <!-- Close Button -->
+            <button class="close_btn" id="closeModalBtn">&times;</button>
+
+            <!-- Breaking News Ticker / Banner -->
+            <div class="breaking_news_bar">
+                <span class="news_tag">BREAKING NEWS</span>
+                <div class="marquee">
+                    <span id="modalNewsTitle">Headline goes here...</span>
+                </div>
+            </div>
+
+            <!-- Description -->
+            <div class="modal_body">
+                <p id="modalDesc"></p>
+                
+                <!-- Certificate Preview -->
+                <div class="cert_preview">
+                    <img id="modalCertImg" src="" alt="Certificate Proof">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= FOOTER LINE ================= -->
+    <hr class="line">
+
+    <!-- ================= FOOTER ================= -->
+    <div class="footer">
+        <p>SG</p>
+        <svg viewBox="0 0 24 24" fill="black">
+            <circle cx="12" cy="12" r="10" />
+        </svg>
+        <p>EDITION</p>
+        <svg viewBox="0 0 24 24" fill="black">
+            <circle cx="12" cy="12" r="10" />
+        </svg>
+        <p>2008</p>
+        <svg viewBox="0 0 24 24" fill="black">
+            <circle cx="12" cy="12" r="10" />
+        </svg>
+        <p>ALGORITHM TIMES</p>
+    </div>
+
+    <!-- ================= JAVASCRIPT FOR MODAL ================= -->
+    <script>
+        const modal = document.getElementById('certModal');
+        const closeModalBtn = document.getElementById('closeModalBtn');
+        const certButtons = document.querySelectorAll('.cert_btn');
+
+        const modalNewsTitle = document.getElementById('modalNewsTitle');
+        const modalDesc = document.getElementById('modalDesc');
+        const modalCertImg = document.getElementById('modalCertImg');
+
+        // Open Modal
+        certButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const title = button.getAttribute('data-title');
+                const desc = button.getAttribute('data-desc');
+                const imgSrc = button.getAttribute('data-img');
+
+                modalNewsTitle.textContent = title;
+                modalDesc.textContent = desc;
+                modalCertImg.src = imgSrc;
+
+                modal.classList.add('active');
+            });
+        });
+
+        // Close Modal via 'X' Button
+        closeModalBtn.addEventListener('click', () => {
+            modal.classList.remove('active');
+        });
+
+        // Close Modal by clicking outside content box
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+
+</html>
