@@ -188,6 +188,32 @@ body {
     max-width: 600px;
 }
 
+/* ================= TECH TAGS / CELLS ================= */
+
+.tech_tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.tech_tag {
+    font-family: "Libre Baskerville", serif;
+    font-size: 11px;
+    padding: 4px 10px;
+    background-color: #EFE8D8;
+    color: #4F6F52;
+    border: 1px solid #4F6F52;
+    border-radius: 3px;
+    letter-spacing: 0.5px;
+    transition: all 0.2s ease;
+}
+
+.tech_tag:hover {
+    background-color: #4F6F52;
+    color: #F8F3E8;
+}
+
 /* ================= PROJECT BUTTON ================= */
 
 .project_button {
