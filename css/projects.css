@@ -1,20 +1,24 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     background: #F8F3E8;
     color: #1c1c1c;
+    overflow-x: hidden;
 }
 
 /* ================= SHARED HEADER ================= */
 
 .main_container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    gap: 170px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 .main_heading {
@@ -26,9 +30,10 @@ body {
 }
 
 .small_text {
-    margin: 60px;
+    margin: 20px;
     font-family: "Libre Baskerville", serif;
     text-align: right;
+    white-space: nowrap;
 }
 
 .tagline {
@@ -47,7 +52,8 @@ body {
 .tagline::before,
 .tagline::after {
     content: "";
-    width: 180px;
+    flex: 1;
+    max-width: 180px;
     height: 1px;
     background: #1c1c1c;
 }
@@ -65,7 +71,8 @@ body {
     margin: 10px 0;
     display: flex;
     justify-content: center;
-    gap: 120px;
+    flex-wrap: wrap;
+    gap: 20px 120px;
     list-style-type: none;
     font-size: large;
 }
@@ -258,6 +265,7 @@ body {
     font-weight: bold;
     font-size: 16px;
     font-family: sans-serif;
+    flex-wrap: wrap;
 }
 
 .footer svg {
@@ -265,17 +273,21 @@ body {
     width: 10px;
 }
 
-/* ================= RESPONSIVE ================= */
+/* ================= RESPONSIVE LAYOUT ADJUSTMENTS ================= */
 
-@media(max-width:950px) {
-    .main_container {
-        gap: 30px;
+@media (max-width: 950px) {
+    .navbar ul {
+        gap: 15px 30px;
     }
 
     .project {
         flex-direction: column;
         align-items: flex-start;
         gap: 15px;
+    }
+
+    .project:hover {
+        transform: none;
     }
 
     .project_image {
@@ -286,5 +298,35 @@ body {
     .project_button {
         width: 100%;
         text-align: left;
+    }
+
+    .view_button {
+        display: block;
+        text-align: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .main_container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .small_text {
+        text-align: center !important;
+        margin: 5px 0;
+    }
+
+    .tagline::before,
+    .tagline::after {
+        display: none;
+    }
+
+    .separator {
+        width: 80%;
+    }
+
+    .footer {
+        gap: 15px;
     }
 }
