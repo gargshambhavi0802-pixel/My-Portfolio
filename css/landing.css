@@ -1,60 +1,60 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body{
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
 
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    background:#F8F3E8;
+    background: #F8F3E8;
 
-    font-family:"Libre Baskerville", serif;
+    font-family: "Libre Baskerville", serif;
 
-    overflow:hidden;
+    overflow-x: hidden;
+
+    padding: 30px 20px;
 }
 
 /* Main Container */
 
-.landing{
-
-    width:700px;
-
-    text-align:center;
-
+.landing {
+    width: min(700px, 100%);
+    text-align: center;
 }
 
 /* Small Edition */
 
-.edition{
-
-    letter-spacing:4px;
-
-    color:#666;
-
-    font-size:14px;
-
-    margin-bottom:35px;
-
+.edition {
+    letter-spacing: 4px;
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 35px;
 }
 
-
-
 /* Newspaper Title */
+
 #title {
     font-family: 'UnifrakturCook', cursive !important;
-    font-size: 78px;
+    font-size: clamp(42px, 8vw, 78px);
     font-weight: 700;
     color: #111;
     min-height: 95px;
     letter-spacing: 1px;
+    line-height: 1.2;
 }
 
-/* Ensure the cursor inherits the title font */
+/* Blinking Cursor */
+
 .cursor {
     display: inline-block;
     font-family: 'UnifrakturCook', cursive;
@@ -70,136 +70,160 @@ body{
 
 /* Subtitle */
 
-.subtitle{
-
-    margin-top:18px;
-
-    font-size:20px;
-
-    color:#4F6F52;
-
-    letter-spacing:2px;
-
+.subtitle {
+    margin-top: 18px;
+    font-size: clamp(14px, 2.5vw, 20px);
+    color: #4F6F52;
+    letter-spacing: 2px;
 }
 
 /* Loading Box */
 
-.loading-box{
-
-    width:100%;
-
-    margin-top:70px;
-
+.loading-box {
+    width: 100%;
+    margin-top: 70px;
 }
 
 /* Outer Bar */
 
-.loading-bar{
-
-    width:100%;
-
-    height:12px;
-
-    border:2px solid #1c1c1c;
-
-    overflow:hidden;
-
+.loading-bar {
+    width: 100%;
+    height: 12px;
+    border: 2px solid #1c1c1c;
+    overflow: hidden;
 }
 
 /* Inner Bar */
 
-#progress{
-
-    width:0%;
-
-    height:100%;
-
-    background:#4F6F52;
-
-    transition:width .2s linear;
-
+#progress {
+    width: 0%;
+    height: 100%;
+    background: #4F6F52;
+    transition: width .2s linear;
 }
 
 /* Percentage */
 
-#percent{
-
-    display:block;
-
-    margin-top:18px;
-
-    font-size:18px;
-
-    font-weight:bold;
-
+#percent {
+    display: block;
+    margin-top: 18px;
+    font-size: 18px;
+    font-weight: bold;
 }
 
 /* Status */
 
-#status{
-
-    margin-top:45px;
-
-    color:#555;
-
-    letter-spacing:1px;
-
-    font-size:18px;
-
+#status {
+    margin-top: 45px;
+    color: #555;
+    letter-spacing: 1px;
+    font-size: clamp(14px, 2.5vw, 18px);
 }
 
 /* Button */
 
-#enterBtn{
+#enterBtn {
+    margin-top: 70px;
+    padding: 15px 40px;
 
-    margin-top:70px;
+    font-size: clamp(14px, 2.5vw, 18px);
+    font-family: "Libre Baskerville", serif;
 
-    padding:15px 40px;
+    cursor: pointer;
 
-    font-size:18px;
+    background: #4F6F52;
+    color: white;
 
-    cursor:pointer;
+    border: none;
+    border-radius: 8px;
 
-    background:#4F6F52;
+    opacity: 0;
+    pointer-events: none;
 
-    color:white;
-
-    border:none;
-
-    border-radius:8px;
-
-    opacity:0;
-
-    pointer-events:none;
-
-    transition:.35s;
-
+    transition: .35s;
 }
 
-#enterBtn:hover{
-
-    transform:translateY(-4px);
-
-    box-shadow:0 10px 20px rgba(79,111,82,.35);
-
+#enterBtn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(79, 111, 82, .35);
 }
 
-/* Blinking Cursor */
 
-.cursor{
+/* ================= MOBILE ================= */
 
-    display:inline-block;
+@media (max-width: 600px) {
 
-    animation:blink .8s infinite;
-
-}
-
-@keyframes blink{
-
-    50%{
-
-        opacity:0;
-
+    body {
+        padding: 25px 16px;
     }
 
+    .edition {
+        font-size: 11px;
+        letter-spacing: 2px;
+        margin-bottom: 25px;
+    }
+
+    #title {
+        min-height: auto;
+    }
+
+    .subtitle {
+        margin-top: 12px;
+        letter-spacing: 1px;
+    }
+
+    .loading-box {
+        margin-top: 50px;
+    }
+
+    .loading-bar {
+        height: 10px;
+    }
+
+    #percent {
+        margin-top: 14px;
+        font-size: 15px;
+    }
+
+    #status {
+        margin-top: 35px;
+    }
+
+    #enterBtn {
+        margin-top: 50px;
+        padding: 13px 25px;
+    }
+}
+
+
+/* ================= VERY SMALL SCREENS ================= */
+
+@media (max-width: 360px) {
+
+    body {
+        padding: 20px 12px;
+    }
+
+    .edition {
+        font-size: 9px;
+        letter-spacing: 1.5px;
+    }
+
+    #title {
+        font-size: 38px;
+    }
+
+    .loading-box {
+        margin-top: 40px;
+    }
+
+    #status {
+        margin-top: 30px;
+    }
+
+    #enterBtn {
+        margin-top: 40px;
+        padding: 12px 20px;
+        font-size: 13px;
+    }
 }
