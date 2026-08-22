@@ -516,3 +516,469 @@ body {
     display: block;
     margin-bottom: 2px;
 }
+
+
+/* =====================================================
+   RESPONSIVE DESIGN
+===================================================== */
+
+/* ---------------- LARGE TABLETS / SMALL LAPTOPS ---------------- */
+
+@media (max-width: 1200px) {
+
+    /* Header */
+
+    .main_container {
+        gap: 70px;
+    }
+
+    .small_text {
+        margin: 40px;
+    }
+
+    .main_heading {
+        font-size: 60px;
+    }
+
+
+    /* Navbar */
+
+    .navbar ul {
+        gap: 60px;
+    }
+
+
+    /* Newspaper Grid */
+
+    .front_page {
+        grid-template-columns: 1fr 1.5fr 1fr;
+        gap: 20px;
+    }
+
+    .headline_main {
+        font-size: 2rem;
+    }
+
+    .subheadline {
+        font-size: 1rem;
+    }
+
+}
+
+
+/* ---------------- TABLETS ---------------- */
+
+@media (max-width: 1024px) {
+
+    /* Header */
+
+    .main_container {
+        gap: 30px;
+    }
+
+    .small_text {
+        margin: 25px;
+        font-size: 14px;
+    }
+
+    .main_heading {
+        font-size: 55px;
+    }
+
+
+    /* Tagline */
+
+    .tagline::before,
+    .tagline::after {
+        width: 100px;
+    }
+
+
+    /* Navbar */
+
+    .navbar ul {
+        gap: 30px;
+        flex-wrap: wrap;
+    }
+
+
+    /* Main Newspaper Layout */
+
+    .front_page {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .col {
+        padding: 0 10px;
+    }
+
+    .col_left,
+    .col_center {
+        border-right: none;
+        border-bottom: 1px solid #1c1c1c;
+        padding-bottom: 35px;
+    }
+
+    .col_center {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+
+    /* Main Content */
+
+    .headline_main {
+        font-size: clamp(2rem, 5vw, 2.8rem);
+    }
+
+    .subheadline {
+        font-size: 1.1rem;
+    }
+
+
+    /* Image */
+
+    .my_image {
+        width: min(300px, 100%);
+    }
+
+
+    /* Footer */
+
+    .footer {
+        gap: 20px;
+    }
+
+}
+
+
+/* ---------------- MOBILE ---------------- */
+
+@media (max-width: 768px) {
+
+    /* General */
+
+    body {
+        overflow-x: hidden;
+    }
+
+
+    /* Header */
+
+    .main_container {
+        flex-direction: column;
+        gap: 5px;
+        padding: 25px 15px 0;
+    }
+
+    .small_text {
+        margin: 0;
+        text-align: center !important;
+        font-size: 13px;
+    }
+
+    .main_heading {
+        font-size: clamp(42px, 11vw, 65px);
+        margin: 10px 0;
+        padding: 0;
+        line-height: 1.1;
+    }
+
+
+    /* Tagline */
+
+    .tagline {
+        gap: 10px;
+        margin: 15px 10px;
+        font-size: 11px;
+        letter-spacing: 1.5px;
+        text-align: center;
+    }
+
+    .tagline::before,
+    .tagline::after {
+        width: 45px;
+        flex-shrink: 0;
+    }
+
+
+    /* Navbar */
+
+    .navbar {
+        width: 92%;
+        margin-top: 25px;
+    }
+
+    .navbar ul {
+        gap: 5px 15px;
+        margin: 7px 5px;
+        justify-content: center;
+        flex-wrap: wrap;
+        font-size: 13px;
+    }
+
+    .navbar ul li {
+        padding: 5px 7px;
+    }
+
+
+    /* Main Newspaper Layout */
+
+    .front_page {
+        width: 92%;
+        margin-top: 30px;
+        gap: 30px;
+    }
+
+    .col {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .col_left,
+    .col_center {
+        padding-bottom: 30px;
+    }
+
+
+    /* Section Headings */
+
+    .fonts {
+        font-size: 0.9rem;
+    }
+
+
+    /* Skills */
+
+    .skill {
+        gap: 12px;
+        margin-bottom: 20px;
+    }
+
+    .skill h3 {
+        font-size: 1rem;
+    }
+
+    .skill p {
+        font-size: 0.85rem;
+    }
+
+
+    /* Quote */
+
+    .quote_box {
+        margin-top: 30px;
+        font-size: 1rem;
+    }
+
+
+    /* Center Article */
+
+    .headline_main {
+        font-size: clamp(1.7rem, 7vw, 2.4rem);
+        line-height: 1.2;
+    }
+
+    .subheadline {
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+
+    .article_body p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+
+    /* Hero Image */
+
+    .hero_image_frame {
+        padding: 6px;
+    }
+
+    .my_image {
+        width: min(260px, 100%);
+    }
+
+
+    /* CTA */
+
+    .read {
+        width: 145px;
+        height: 48px;
+    }
+
+
+    /* Education */
+
+    .education_box {
+        padding: 15px;
+    }
+
+    .edu_header {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .edu_block .degree {
+        font-size: 0.95rem;
+    }
+
+    .edu_date {
+        font-size: 0.75rem;
+    }
+
+    .school_name {
+        font-size: 0.8rem;
+    }
+
+    .marks_table {
+        font-size: 0.8rem;
+    }
+
+
+    /* Edition Index */
+
+    .edition_item {
+        gap: 12px;
+    }
+
+    .edition_item .num {
+        font-size: 1.4rem;
+    }
+
+
+    /* Quick Facts */
+
+    .quick_facts {
+        margin-top: 25px;
+    }
+
+
+    /* Footer */
+
+    .line {
+        width: 92%;
+        margin-top: 35px;
+    }
+
+    .footer {
+        gap: 12px;
+        margin: 15px 10px;
+        font-size: 12px;
+        text-align: center;
+    }
+
+}
+
+
+/* ---------------- SMALL MOBILE ---------------- */
+
+@media (max-width: 480px) {
+
+    /* Header */
+
+    .main_container {
+        padding-top: 20px;
+    }
+
+    .main_heading {
+        font-size: clamp(36px, 12vw, 52px);
+    }
+
+    .small_text {
+        font-size: 11px;
+    }
+
+
+    /* Tagline */
+
+    .tagline {
+        font-size: 9px;
+        letter-spacing: 1px;
+    }
+
+    .tagline::before,
+    .tagline::after {
+        width: 25px;
+    }
+
+
+    /* Navbar */
+
+    .navbar ul {
+        font-size: 11px;
+        gap: 3px 6px;
+    }
+
+    .navbar ul li {
+        padding: 4px 5px;
+    }
+
+
+    /* Newspaper */
+
+    .front_page {
+        width: 90%;
+    }
+
+
+    /* Headline */
+
+    .headline_main {
+        font-size: clamp(1.45rem, 7vw, 2rem);
+    }
+
+    .subheadline {
+        font-size: 0.85rem;
+    }
+
+
+    /* Article */
+
+    .article_body p {
+        font-size: 0.88rem;
+        text-align: left;
+    }
+
+    .drop_cap {
+        font-size: 3rem;
+    }
+
+
+    /* Education */
+
+    .education_box {
+        padding: 12px;
+    }
+
+    .marks_table {
+        font-size: 0.72rem;
+    }
+
+    .marks_table th {
+        font-size: 0.65rem;
+    }
+
+
+    /* Quick Facts */
+
+    .facts_list li {
+        font-size: 0.75rem;
+    }
+
+
+    /* Footer */
+
+    .footer {
+        gap: 8px;
+        font-size: 10px;
+    }
+
+    .footer svg {
+        width: 7px;
+        height: 7px;
+    }
+
+}
