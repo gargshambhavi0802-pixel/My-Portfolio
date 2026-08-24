@@ -14,11 +14,9 @@ body {
 
 .main_container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+    gap: 170px;
 }
 
 .main_heading {
@@ -30,10 +28,9 @@ body {
 }
 
 .small_text {
-    margin: 20px;
+    margin: 60px;
     font-family: "Libre Baskerville", serif;
     text-align: right;
-    white-space: nowrap;
 }
 
 .tagline {
@@ -71,8 +68,7 @@ body {
     margin: 10px 0;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px 120px;
+    gap: 120px;
     list-style-type: none;
     font-size: large;
 }
@@ -273,26 +269,53 @@ body {
     width: 10px;
 }
 
-/* ================= RESPONSIVE LAYOUT ADJUSTMENTS ================= */
+/* =====================================================
+   PROJECTS PAGE - SPECIFIC RESPONSIVE DESIGN
+===================================================== */
 
-@media (max-width: 950px) {
-    .navbar ul {
-        gap: 15px 30px;
+
+/* ---------- LARGE TABLETS / SMALL LAPTOPS ---------- */
+
+@media (max-width: 1100px) {
+
+    .projects_container {
+        width: 90%;
+    }
+
+    .project {
+        gap: 25px;
+    }
+
+    .project_content p {
+        max-width: 550px;
+    }
+
+}
+
+
+/* ---------- TABLETS ---------- */
+
+@media (max-width: 900px) {
+
+    .projects_container {
+        width: 90%;
     }
 
     .project {
         flex-direction: column;
         align-items: flex-start;
-        gap: 15px;
+        gap: 18px;
+        padding: 25px 0;
     }
 
+    /* Remove sideways hover movement */
     .project:hover {
         transform: none;
     }
 
     .project_image {
         width: 100%;
-        height: 180px;
+        height: 250px;
     }
 
     .project_button {
@@ -304,29 +327,89 @@ body {
         display: block;
         text-align: center;
     }
+
 }
 
+
+/* ---------- MOBILE DEVICES ---------- */
+
 @media (max-width: 600px) {
-    .main_container {
-        flex-direction: column;
+
+    .projects_container {
+        width: 88%;
+    }
+
+    .project {
+        gap: 15px;
+        padding: 25px 0;
+    }
+
+    .project_image {
+        width: 100%;
+        height: 200px;
+    }
+
+    .project_content h2 {
+        font-size: 17px;
+        line-height: 1.4;
+    }
+
+    .project_content p {
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+    /* Tech Tags */
+
+    .tech_tags {
+        gap: 6px;
+        margin-top: 10px;
+    }
+
+    .tech_tag {
+        font-size: 10px;
+        padding: 4px 8px;
+    }
+
+    /* Project Button */
+
+    .project_button {
+        width: 100%;
+    }
+
+    .view_button {
+        width: 100%;
+        padding: 12px;
+        font-size: 10px;
         text-align: center;
     }
 
-    .small_text {
-        text-align: center !important;
-        margin: 5px 0;
+}
+
+
+/* ---------- VERY SMALL MOBILE SCREENS ---------- */
+
+@media (max-width: 380px) {
+
+    .projects_container {
+        width: 90%;
     }
 
-    .tagline::before,
-    .tagline::after {
-        display: none;
+    .project_image {
+        height: 170px;
     }
 
-    .separator {
-        width: 80%;
+    .project_content h2 {
+        font-size: 16px;
     }
 
-    .footer {
-        gap: 15px;
+    .project_content p {
+        font-size: 12px;
     }
+
+    .tech_tag {
+        font-size: 9px;
+        padding: 4px 7px;
+    }
+
 }

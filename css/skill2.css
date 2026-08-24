@@ -292,22 +292,14 @@ body {
 }
 
 
-/* ================= RESPONSIVE DESIGN ================= */
+/* =====================================================
+   SKILLS PAGE RESPONSIVE DESIGN
+===================================================== */
+
 
 /* ---------- Large Tablets / Small Laptops ---------- */
+
 @media (max-width: 1200px) {
-
-    .main_container {
-        gap: 80px;
-    }
-
-    .small_text {
-        margin: 40px;
-    }
-
-    .navbar ul {
-        gap: 60px;
-    }
 
     .classifieds_wrapper {
         width: 90%;
@@ -317,48 +309,11 @@ body {
 
 
 /* ---------- Tablets ---------- */
+
 @media (max-width: 900px) {
 
-    /* Header */
-    .main_container {
-        gap: 30px;
-        justify-content: space-between;
-        padding: 0 30px;
-    }
-
-    .main_heading {
-        font-size: 55px;
-    }
-
-    .small_text {
-        margin: 30px 0;
-        font-size: 13px;
-    }
-
-    /* Tagline */
-    .tagline::before,
-    .tagline::after {
-        width: 100px;
-    }
-
-    /* Navbar */
-    .navbar ul {
-        gap: 30px;
-        font-size: 15px;
-        flex-wrap: wrap;
-    }
-
-    /* Page Heading */
-    .heading h1 {
-        font-size: 45px;
-    }
-
-    /* Separator */
-    .separator {
-        width: 65%;
-    }
-
     /* Skills Grid */
+
     .classifieds_wrapper {
         width: 90%;
     }
@@ -372,90 +327,11 @@ body {
 
 
 /* ---------- Mobile Devices ---------- */
+
 @media (max-width: 600px) {
 
-    body {
-        overflow-x: hidden;
-    }
-
-    /* Header */
-    .main_container {
-        flex-direction: column;
-        gap: 5px;
-        padding: 20px 15px 0;
-    }
-
-    .main_heading {
-        font-size: clamp(40px, 11vw, 58px);
-        margin: 5px 0;
-        padding: 0;
-        line-height: 1.1;
-    }
-
-    .small_text {
-        margin: 5px 0;
-        text-align: center !important;
-        font-size: 12px;
-        line-height: 1.4;
-    }
-
-    /* Tagline */
-    .tagline {
-        gap: 8px;
-        margin: 18px 10px;
-        font-size: 10px;
-        letter-spacing: 1.5px;
-        text-align: center;
-    }
-
-    .tagline::before,
-    .tagline::after {
-        width: 35px;
-        flex-shrink: 0;
-    }
-
-    /* Navbar */
-    .navbar {
-        width: 92%;
-        margin-top: 25px;
-    }
-
-    .navbar ul {
-        gap: 4px 12px;
-        padding: 8px 5px;
-        margin: 0;
-        font-size: 12px;
-        flex-wrap: wrap;
-    }
-
-    .navbar ul li {
-        padding: 5px 6px;
-    }
-
-    /* Page Heading */
-    .heading {
-        margin-top: 30px;
-        padding: 0 15px;
-    }
-
-    .heading h1 {
-        font-size: clamp(28px, 7vw, 42px);
-        letter-spacing: 1px;
-        line-height: 1.2;
-    }
-
-    /* Separator */
-    .separator {
-        width: 80%;
-        margin: 20px auto 35px;
-    }
-
-    .separator span {
-        padding: 0 15px;
-        letter-spacing: 5px;
-    }
-
     /* Classified Section */
+
     .classifieds_wrapper {
         width: 90%;
         margin-bottom: 35px;
@@ -476,7 +352,9 @@ body {
         line-height: 1.5;
     }
 
+
     /* Cards */
+
     .classifieds_grid {
         grid-template-columns: 1fr;
         gap: 18px;
@@ -498,46 +376,20 @@ body {
         font-size: 10px;
     }
 
+
     /* Reduce hover movement on mobile */
+
     .classified_card:hover {
         transform: translateY(-4px);
         box-shadow: 4px 5px 0px #1c1c1c;
-    }
-
-    /* Footer */
-    .line {
-        margin-top: 35px;
-    }
-
-    .footer {
-        gap: 10px 15px;
-        font-size: 11px;
-        margin: 15px 10px;
-        text-align: center;
     }
 
 }
 
 
 /* ---------- Very Small Screens ---------- */
+
 @media (max-width: 380px) {
-
-    .main_heading {
-        font-size: 38px;
-    }
-
-    .navbar ul {
-        font-size: 10px;
-        gap: 2px 6px;
-    }
-
-    .navbar ul li {
-        padding: 4px;
-    }
-
-    .heading h1 {
-        font-size: 26px;
-    }
 
     .classified_card {
         padding: 15px;

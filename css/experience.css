@@ -370,43 +370,154 @@ body {
     width: 10px;
 }
 
-/* ================= RESPONSIVE ================= */
+/* ================= EXPERIENCE PAGE RESPONSIVE ================= */
 
-@media (max-width: 950px) {
-    .main_container {
-        gap: 30px;
+/* ---------- LARGE TABLETS ---------- */
+
+@media (max-width: 1100px) {
+
+    .experience_container {
+        width: 90%;
+    }
+
+    .experience_item {
+        grid-template-columns: 100px 30px 1fr 160px;
+        gap: 18px;
+    }
+
+}
+
+
+/* ---------- TABLETS ---------- */
+
+@media (max-width: 900px) {
+
+    .experience_container {
+        width: 90%;
     }
 
     .experience_item {
         grid-template-columns: 100px 30px 1fr;
+        gap: 18px;
     }
 
     .cert_side_wrapper {
         grid-column: 3;
         justify-content: flex-start;
-        margin-top: 10px;
+        margin-top: 5px;
     }
 
     .achievement_grid {
         grid-template-columns: 1fr;
     }
+
 }
 
-@media (max-width: 650px) {
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 600px) {
+
+    .experience_container {
+        width: 88%;
+    }
+
     .experience_item {
         grid-template-columns: 1fr;
-        gap: 10px;
+        gap: 12px;
+        padding-bottom: 25px;
+        margin-bottom: 25px;
     }
+
+
+    /* Date */
+
+    .date {
+        text-align: left;
+        padding: 0;
+    }
+
+    .date p {
+        font-size: 20px;
+    }
+
+    .date span {
+        font-size: 12px;
+    }
+
+
+    /* Hide timeline on mobile */
 
     .timeline {
         display: none;
     }
 
-    .date {
-        text-align: left;
+
+    /* Experience content */
+
+    .experience_content h2 {
+        font-size: 18px;
+        line-height: 1.4;
     }
 
-    .heading h1 {
-        font-size: 40px;
+    .experience_content h3 {
+        font-size: 12px;
+        line-height: 1.5;
+        margin-bottom: 10px;
     }
+
+    .experience_content p {
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+
+    /* Tags */
+
+    .tags {
+        gap: 6px;
+        margin-top: 12px;
+    }
+
+    .tags span {
+        font-size: 10px;
+        padding: 4px 8px;
+    }
+
+
+    /* Certificate button */
+
+    .cert_side_wrapper {
+        grid-column: auto;
+        width: 100%;
+        justify-content: flex-start;
+        margin-top: 5px;
+    }
+
+    .cert_btn {
+        width: 100%;
+        padding: 12px;
+        font-size: 10px;
+    }
+
+}
+
+
+/* ---------- VERY SMALL MOBILE ---------- */
+
+@media (max-width: 380px) {
+
+    .experience_content h2 {
+        font-size: 16px;
+    }
+
+    .experience_content p {
+        font-size: 12px;
+    }
+
+    .tags span {
+        font-size: 9px;
+        padding: 4px 7px;
+    }
+
 }

@@ -352,62 +352,184 @@ button:hover {
     width: 10px;
 }
 
-/* ================= RESPONSIVE ================= */
+/* ================= CONTACT PAGE RESPONSIVE ================= */
 
-@media(max-width:1200px) {
+/* ---------- TABLETS ---------- */
+
+@media (max-width: 900px) {
+
     .contact_container {
-        width: 92%;
-        gap: 50px;
+        width: 90%;
+        gap: 40px;
     }
+
+    .contact_info {
+        width: 44%;
+    }
+
+    .form_box {
+        width: 50%;
+        padding: 30px;
+    }
+
+    .intro {
+        width: 100%;
+        font-size: 17px;
+    }
+
 }
 
-@media(max-width:950px) {
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 600px) {
+
     .contact_container {
+        width: 88%;
         flex-direction: column;
-        align-items: center;
+        align-items: stretch;
+        gap: 40px;
     }
 
+    /* Remove vertical divider */
     .contact_container::before {
         display: none;
     }
 
     .contact_info,
-    .form_box,
-    .intro {
-        width: 100%;
-    }
-}
-
-@media(max-width:650px) {
-    .heading h1 {
-        font-size: 42px;
-    }
-
-    .separator {
-        width: 80%;
-    }
-
     .form_box {
-        padding: 25px;
-    }
-
-    .form_box h2 {
-        font-size: 30px;
+        width: 100%;
     }
 
     .contact_info h2 {
-        font-size: 32px;
+        font-size: 30px;
+        line-height: 1.3;
+    }
+
+    .intro {
+        width: 100%;
+        font-size: 14px;
+        line-height: 1.7;
+        margin-bottom: 30px;
+        text-align: left;
+    }
+
+    .info {
+        gap: 15px;
+        margin-bottom: 25px;
+    }
+
+    .info:hover {
+        transform: none;
+    }
+
+    .icon {
+        width: 42px;
+        height: 42px;
+        flex-shrink: 0;
+    }
+
+    .icon svg {
+        width: 20px;
+        height: 20px;
     }
 
     .info h3 {
-        font-size: 18px;
+        font-size: 16px;
+        margin-bottom: 5px;
     }
 
     .info p {
-        font-size: 15px;
+        font-size: 13px;
+        word-break: break-word;
+    }
+
+    .form_box {
+        padding: 25px 20px;
+    }
+
+    .form_box:hover {
+        transform: none;
+        box-shadow: none;
+    }
+
+    .form_box h2 {
+        font-size: 27px;
+        margin-bottom: 25px;
+    }
+
+    label {
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
+
+    input,
+    textarea {
+        padding: 12px;
+        margin-bottom: 20px;
+        font-size: 14px;
+    }
+
+    textarea {
+        line-height: 1.6;
     }
 
     button {
         width: 100%;
+        height: 50px;
+        font-size: 13px;
     }
+
+    .closing {
+        width: 88%;
+        margin: 50px auto 30px;
+        font-size: 13px;
+        line-height: 1.8;
+    }
+
+}
+
+
+/* ---------- VERY SMALL MOBILE ---------- */
+
+@media (max-width: 380px) {
+
+    .contact_container {
+        width: 90%;
+    }
+
+    .contact_info h2 {
+        font-size: 26px;
+    }
+
+    .intro {
+        font-size: 13px;
+    }
+
+    .form_box {
+        padding: 20px 15px;
+    }
+
+    .form_box h2 {
+        font-size: 24px;
+    }
+
+    .info h3 {
+        font-size: 15px;
+    }
+
+    .info p {
+        font-size: 12px;
+    }
+
+    input,
+    textarea {
+        font-size: 13px;
+        padding: 10px;
+    }
+
+    button {
+        font-size: 11px;
+    }
+
 }

@@ -143,3 +143,157 @@
     display: block;
     margin: 0 auto;
 }
+
+/* ================= ACHIEVEMENTS PAGE RESPONSIVE ================= */
+
+/* ---------- TABLETS ---------- */
+
+@media (max-width: 900px) {
+
+    .achievements_container {
+        width: 90%;
+        margin: 30px auto;
+        padding: 0;
+    }
+
+    .achievement_grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+}
+
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 600px) {
+
+    .achievements_container {
+        width: 88%;
+        margin: 25px auto;
+        padding: 0;
+    }
+
+    .achievement_grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .achievement {
+        padding: 18px;
+    }
+
+    .achievement_header {
+        gap: 10px;
+    }
+
+    .number {
+        font-size: 20px;
+    }
+
+    .achievement h3 {
+        font-size: 15px;
+        line-height: 1.4;
+    }
+
+    .achievement p {
+        font-size: 12px;
+        line-height: 1.7;
+    }
+
+    .cert_wrapper {
+        padding-top: 15px;
+    }
+
+    .cert_btn {
+        width: 100%;
+        font-size: 10px;
+        padding: 11px;
+    }
+
+
+    /* ---------- MODAL ---------- */
+
+    .modal_content {
+        width: 88%;
+        max-height: 80vh;
+        padding: 18px;
+        box-shadow: 6px 6px 0px #000;
+    }
+
+    .close_btn {
+        top: 8px;
+        right: 10px;
+        font-size: 1.7rem;
+    }
+
+    .breaking_news_bar {
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    .news_tag {
+        padding: 6px 8px;
+        font-size: 0.6rem;
+    }
+
+    .marquee span {
+        font-size: 0.7rem;
+    }
+
+    .modal_body p {
+        font-size: 0.8rem;
+        line-height: 1.6;
+        text-align: left;
+    }
+
+    .cert_preview {
+        padding: 6px;
+    }
+
+}
+
+
+/* ---------- VERY SMALL MOBILE ---------- */
+
+@media (max-width: 380px) {
+
+    .achievements_container {
+        width: 90%;
+    }
+
+    .achievement {
+        padding: 15px;
+    }
+
+    .number {
+        font-size: 18px;
+    }
+
+    .achievement h3 {
+        font-size: 13px;
+    }
+
+    .achievement p {
+        font-size: 11px;
+    }
+
+    .modal_content {
+        width: 90%;
+        padding: 14px;
+    }
+
+    .news_tag {
+        font-size: 0.55rem;
+        padding: 5px 6px;
+    }
+
+    .marquee span {
+        font-size: 0.65rem;
+    }
+
+    .modal_body p {
+        font-size: 0.75rem;
+    }
+
+}
