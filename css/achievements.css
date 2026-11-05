@@ -297,3 +297,95 @@
     }
 
 }
+
+/* ================= SECTIONS (Coding / Hackathons / Certifications) ================= */
+
+.section_block {
+    margin-bottom: 55px;
+}
+
+.section_masthead {
+    text-align: center;
+    border-top: 2px solid #1c1c1c;
+    border-bottom: 2px solid #1c1c1c;
+    padding: 10px 0;
+    margin-bottom: 28px;
+}
+
+.section_masthead span {
+    font-family: 'Libre Baskerville', serif;
+    font-weight: bold;
+    font-size: 15px;
+    letter-spacing: 3px;
+    color: #4F6F52;
+}
+
+.section_masthead p {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    margin-top: 5px;
+    color: #555;
+}
+
+/* Cards flow into 2 or 3 columns by themselves, depending on how many there are */
+.achievement_grid.auto_grid {
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+}
+
+.card_tag {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #4F6F52;
+    margin-bottom: 10px;
+}
+
+/* Big number on the coding profile cards */
+.profile_stat {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 38px;
+    font-weight: bold;
+    line-height: 1;
+    color: #1c1c1c;
+    margin-bottom: 12px;
+}
+
+.profile_stat small {
+    display: block;
+    margin-top: 6px;
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: #555;
+}
+
+/* "View Profile" is a link, so make it look like the certificate buttons */
+a.cert_btn {
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+}
+
+/* Shown inside the pop-up when a certificate image is not available yet */
+.cert_preview.missing img {
+    display: none;
+}
+
+.cert_preview.missing::after {
+    content: "CERTIFICATE COMING SOON";
+    display: block;
+    padding: 40px 10px;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    color: #555;
+}
+
+@media (max-width: 600px) {
+    .section_block { margin-bottom: 40px; }
+    .section_masthead span { font-size: 13px; letter-spacing: 2px; }
+    .section_masthead p { font-size: 9px; }
+    .profile_stat { font-size: 30px; }
+    a.cert_btn { display: block; }
+}
